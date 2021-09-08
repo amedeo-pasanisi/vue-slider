@@ -12,18 +12,16 @@
     <div id="root" class="container">
         <div class="slider-wrapper">
             <div class="prev">
-                <i class="fas fa-chevron-left"></i>
+                <i @click="decreaseCounter" class="fas fa-chevron-left"></i>
             </div>
             <div class="images">
-                <img src="img/copertina1.jpg" alt="">
+                <img :src="photos[counter]" alt="">
             </div>
             <nav>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle" v-for= "photo in photos"></i>
             </nav>
             <div class="next">
-                <i class="fas fa-chevron-right"></i>
+                <i @click="increaseCounter" class="fas fa-chevron-right"></i>
             </div>
         </div>
         
