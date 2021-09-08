@@ -18,7 +18,7 @@
                 <img :src="photos[counter]" alt="">
             </div>
             <nav>
-                <i class="fas fa-circle" v-for= "photo in photos"></i>
+                <i @click="counter = index" :class="(index == counter) ? 'blue' : null" class="fas fa-circle" v-for= "(photo,index) in photos"></i>
             </nav>
             <div class="next">
                 <i @click="increaseCounter" class="fas fa-chevron-right"></i>

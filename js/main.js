@@ -13,10 +13,12 @@ const app = new Vue (
         },
         methods: {
             increaseCounter () {
-                this.counter++
+                this.counter++;
+                if (this.counter == this.photos.length) this.counter = 0;
             },
             decreaseCounter () {
-                this.counter--
+                this.counter--;
+                if (this.counter < 0) this.counter = (this.photos.length - 1);
             }
         }
     }

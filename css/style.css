@@ -49,3 +49,7 @@ nav i {
     margin: 0 10px;
     color: rgba(211, 211, 211, 0.801);
 }
+
+.blue {
+    color: rgba(0, 0, 255, 0.685);
+}
