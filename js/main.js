@@ -11,6 +11,11 @@ const app = new Vue (
                 "img/ponza-i-panorami.jpg"
             ]
         },
+        mounted() {
+            setInterval(() => {
+                this.increaseCounter ();
+            }, 3000);
+        },
         methods: {
             increaseCounter () {
                 this.counter++;
